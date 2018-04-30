@@ -33,7 +33,7 @@ iOS개발이 처음이라면 `시작하기` 주제부터 시작하세요.
 
 ## 🗺 이미지 버전
 
-필수주제에 대한 로드맵이다. 모든 주제에 대한 로드맵은 [이 곳](RoadmapProject/Script/Generated/ROADMAP.png)에 있다.
+필수주제에 대한 로드맵입니다. 모든 주제에 대한 로드맵은 [이 곳](RoadmapProject/Script/Generated/ROADMAP.png)에서 볼 수 있습니다.
 ![Header image](RoadmapProject/Script/Generated/ESSENTIALROADMAP.png)
 
 ## 📝 텍스트 버전
