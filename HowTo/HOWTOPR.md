@@ -1,39 +1,35 @@
-## How to add new topics or materials
-
-#### One file to rule them all
+## 새로운 주제와 자료를 추가하는 방법
+#### 하나의 파일로 모든 파일을 관리합니다.
 <img src="CONTENTSCREENSHOT.png" width="720">
 
-### How to add topics and materials
+## 새로운 주제와 자료를 추가하는 방법
+1. fork한 레포의 `RoadmapProject/Script/Content.yml`를 엽니다.
+2. 주제나 자료의 링크를 추가합니다.
+3. commit한 뒤 `Content.yml`의 변경사항을 깃헙에 push합니다.
+4. pull request를 보냅니다.
 
-1. Open `RoadmapProject/Script/Content.yml` in your fork repository 
-1. Add topics and/or links to materials
-1. Commit and push `Content.yml` changes to Github 
-2. Submit a pull request
+#### 변경사항이 적용되는 시기
 
-#### When your changes will be applied
+1. pull request가 merge되는 것을 기다립니다.
+2. Travis CI가 로드맵의 이미지와 텍스트버전을 재생성하기까지 약 5분을 기다립니다.
 
-1. Wait for your pull request to be merged
-1. Wait up to 5 minutes for Travis CI to regenerate roadmap images and text version
+#### 요구사항
 
+1. 깃
+1. fork한 레포
+2. [Sublime Text](https://www.sublimetext.com/)과 같은 YAML 에디터.
 
-#### Prerequisites for adding topics and materials
+### 로컬에서 생성 스크립트를 실행하는 방법 (옵션)
 
-1. Git
-1. Fork of the repository
-2. YAML editor, e.g. [Sublime Text](https://www.sublimetext.com/).
+생성 스크립트는 로드맵의 이미지와 텍스트 버전을 자동으로 생성합니다.
+1. `./generateAll.sh`을 실행합니다.
 
-### How to run generation script locally (Optional)
-The generation script will generate images and the text version of the roadmap.
+**또는**
 
-1. run `./generateAll.sh`
+1. `RoadmapProject/Script`로 이동한 뒤
+2. `./main.swift`를 실행합니다.
 
-**or**
-
-1. Go to `RoadmapProject/Script`
-2. Run `./main.swift`
-
-##### Prerequisites for running the script locally
-
+##### 스크립트를 로컬에서 돌리기 위한 요구사항
 1. Latest Swift/Xcode
 1. Prepare PlantUML:
 	1. Install [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html)
@@ -46,10 +42,22 @@ The generation script will generate images and the text version of the roadmap.
 		- `brew link --overwrite graphviz`
 	1. Go to `Roadmap Project/Script/` 
 	1. Run `java -jar plantuml.jar -testdot` to check if installed correctly.
+1. 최신버전의 Swift/Xcode
+2. PlantUML
+	1.[JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html)설치
+	2.  Homebrew 설치
+			- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+	1. GraphViz 설치:
+		- `brew install libtool`
+		- `brew link libtool`
+		- `brew install graphviz`
+		- `brew link --overwrite graphviz`
+	1. `Roadmap Project/Script/` 으로 이동
+	1. `java -jar plantuml.jar -testdot`실행해서 이상없이 설치되었는지 확인합니다.
 
-##### How to debug script (Optional)
-Use `Roadmap Project/Roadmap.xcodeproj` to run and debug script.
+##### 스크립트를 디버깅하는 방법 (옵션)
+`Roadmap Project/Roadmap.xcodeproj`을 이용해 스크립트를 실행하고 디버깅합니다.
 
-Xcode runs and debugs an executable binary, thus generated output will be put next to the binary.
+Xcode 는 실행가능한 바이너리파일을 실행하고 디버깅하기 때문에 결과물은 바이너리 파일 옆에 생성될 것입니다.
 
-Always run script via terminal before submitting a PR.
+PR을 보내기 전에 항상 터미널로 스크립트를 실행해보세요.
