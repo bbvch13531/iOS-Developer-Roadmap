@@ -1,4 +1,4 @@
-이 레포는 https://github.com/BohdanOrlov/iOS-Developer-Roadmap 의 번역한 레포입니다.
+원작자인 BohdanOrlov에게 동의를 구하고 https://github.com/BohdanOrlov/iOS-Developer-Roadmap를 한국어로 번역한 레포입니다.
 
 ![Header image](headerImage.png)
 # 🚀 iOS 개발자 로드맵
